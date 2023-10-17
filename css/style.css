@@ -3,12 +3,17 @@
     padding: 0;
     color: #333;
 }
+ul, li{ list-style: none;}
 a{
     text-decoration: none;
 }
 a:hover{
     color:red;
 }
+
+.h100{ height: 100px;}
+.h300{ height: 300px;}
+.h200{ height: 200px;}
 
 .d-flex{ display: flex !important;}
 .jcb{ justify-content: space-between !important;}
@@ -30,8 +35,51 @@ a:hover{
 .col{ flex-grow: 1;}
 .w-100{ width: 100%;}
 
-.position-absolute{ position: absolute;}
-.position-relative{ position: relative;}
+.abs{ position: absolute;}
+.rel{ position: relative;}
 
 .container{ width:1200px; margin: 0 auto;}
+
+#hd{ background-color: yellow; align-items: flex-end; position: relative;}
+#gnb>.gnbli>.gnba{ font-size:23px; font-weight: bold; padding: 0 20px; line-height: 2;}
+#gnb>.gnbli>.gnbul{ background-color: black; left:0; right:0; line-height: 2; text-indent: 2em;
+    height:0; overflow: hidden; transition: 0.5s;
+}
+#gnb>.gnbli>.gnbul>li>a{ color:white }
+#gnb:hover .gnbul{ height: 180px; }
+#gnb>.gnbli:hover>.gnba{
+    color:red
+}
+#gnb:before{
+    content: "";
+    display: block;
+    position: absolute;
+    left:0; right:0;
+    top:100%;
+    height:0;
+    background-color: black;
+    transition: 0.5s;
+}
+#gnb:hover:before{
+    height: 180px;
+}
+
+.swiper{ overflow: hidden;}
+.swiper-slide{ width:1200px; height: 300px;}
+.red{ background-color: red;}
+.green{ background-color: green;}
+.yellow{ background-color: yellow;}
+
+
+.leftright .swiper-wrapper{
+    width:100000px
+}
+.fade .swiper-slide{
+    left:0; top:0; 
+    opacity: 0;
+    transition: 0.5s;
+}
+.fade .swiper-slide.on{
+    opacity: 1;
+}
 
